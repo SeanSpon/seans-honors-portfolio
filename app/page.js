@@ -1,22 +1,118 @@
-const Nav=()=> <nav><a href="#home" className="brand">SM</a><div><a href="#about">About</a><a href="#involvement">Interests</a><a href="#review">Year in Review</a><a href="#honors">Honors</a><a href="#contact">Contact</a></div></nav>;
+const Nav = () => (
+  <nav className="navShell">
+    <a href="#home" className="brand" aria-label="Back to top">
+      <span className="ucMark">UC</span>
+      <span className="brandCopy"><strong>Sean McCulloch</strong><small>Honors Portfolio</small></span>
+    </a>
+    <div className="navLinks">
+      <a href="#about">About</a>
+      <a href="#involvement">Interests</a>
+      <a href="#review">Year in Review</a>
+      <a href="#honors">Honors</a>
+      <a href="#contact">Links</a>
+    </div>
+  </nav>
+);
 
-const years=[
-  {year:"2026–27",label:"First Year",active:true,text:"My first Year-in-Review will be added after the Spring 2027 semester. I’ll use it to reflect on the experiences that shaped my first year, the progress I made toward my goals, and what I want to pursue next."},
-  {year:"2027–28",label:"Second Year",text:"Future annual reflection."},
-  {year:"2028–29",label:"Third Year",text:"Future annual reflection."},
-  {year:"2029–30",label:"Fourth Year",text:"Future annual reflection."}
+const years = [
+  {year:"2026–27",label:"First Year",active:true,text:"My first Year-in-Review will be added after the Spring 2027 semester. I’ll reflect on the experiences that shaped my first year, the progress I made toward my goals, and what I want to pursue next."},
+  {year:"2027–28",label:"Second Year",text:"Annual reflection will be added here after my second year."},
+  {year:"2028–29",label:"Third Year",text:"Annual reflection will be added here after my third year."},
+  {year:"2029–30",label:"Fourth Year",text:"Final undergraduate Year-in-Review will be added here."}
 ];
 
-export default function Page(){return <main><Nav/>
-<section id="home" className="hero"><div className="eyebrow">UNIVERSITY OF CINCINNATI • UNIVERSITY HONORS PROGRAM</div><h1>Sean<br/><span>McCulloch.</span></h1><p className="lead">Information Technology — Software Application Development. Developer, builder, and first-year Honors student at UC.</p><div className="heroActions"><a className="button" href="#about">Explore my portfolio ↓</a><a className="ghostButton" href="https://github.com/SeanSpon" target="_blank" rel="noreferrer">GitHub ↗</a></div></section>
+const interests = [
+  {num:"01",title:"Technology & Software",text:"Software development, web development, AI, cybersecurity, and learning new tools by building with them."},
+  {num:"02",title:"SeeZee Studio",text:"Co-founder of a technology studio where I get hands-on experience building real digital products and solving practical problems.",link:"https://seezeestudios.com",linkText:"Visit SeeZee ↗"},
+  {num:"03",title:"Fitness & Hockey",text:"Lifting and hockey have taught me consistency, competition, teamwork, and how to keep working toward measurable goals."},
+  {num:"04",title:"UC Involvement",text:"I want to explore Honors opportunities, student organizations, professional experiences, co-ops, and new communities at UC."}
+];
 
-<section id="about"><div className="sectionTag">01 / ABOUT ME</div><div className="grid"><div><div className="photo"><span>PHOTO COMING SOON</span><small>Professional photo placeholder</small></div></div><div><h2>Building things that<br/>actually <em>work.</em></h2><p>I’m Sean McCulloch, an Information Technology student at the University of Cincinnati studying Software Application Development and a member of the University Honors Program. I’m originally from Louisville, Kentucky, where I attended Trinity High School.</p><p>I’ve always been drawn to computers, problem solving, and figuring out how technology works. That interest grew into building websites and software projects of my own. I co-founded SeeZee Studio, where I work on real technology projects and continue learning about development, systems, business, communication, and turning ideas into useful products.</p><p>At UC, I want to keep expanding beyond what I already know. I’m interested in software development, artificial intelligence, cybersecurity, entrepreneurship, and the ways technology can solve real problems. Through the Honors Program, I hope to challenge myself outside the classroom, meet people with different interests and perspectives, and become a stronger student and leader.</p><p>Outside of technology, I enjoy lifting, hockey, spending time with friends, and setting new goals for myself. By graduation, I want strong technical experience, meaningful co-op and internship work, a network of people I’ve learned from, and a portfolio that shows how much I’ve grown.</p></div></div></section>
+export default function Page(){return <main>
+  <Nav/>
 
-<section id="involvement" className="alt"><div className="sectionTag">02 / INVOLVEMENT & INTERESTS</div><h2>What I’m into.</h2><p className="sectionIntro">These are the areas I’m involved in now and the directions I want to explore during my time at UC.</p><div className="cards"><article><b>01</b><h3>Technology & Software</h3><p>Software development, web development, AI, cybersecurity, and learning new tools by building with them.</p></article><article><b>02</b><h3>SeeZee Studio</h3><p>Co-founder of a technology studio where I get experience building real digital products and solving practical problems.</p><a className="textLink" href="https://seezeestudios.com" target="_blank" rel="noreferrer">Visit SeeZee ↗</a></article><article><b>03</b><h3>Fitness & Hockey</h3><p>Lifting and hockey have taught me consistency, competition, teamwork, and the value of measurable goals.</p></article><article><b>04</b><h3>UC Involvement</h3><p>I’m exploring Honors opportunities, student organizations, professional experiences, co-ops, and new communities on campus.</p></article></div></section>
+  <section id="home" className="hero">
+    <div className="heroGlow"/>
+    <div className="heroCopy">
+      <div className="kicker"><span/>University of Cincinnati · University Honors Program</div>
+      <h1>Building useful things.<br/><em>Learning along the way.</em></h1>
+      <p>I’m Sean McCulloch, an Information Technology student studying Software Application Development at the University of Cincinnati.</p>
+      <div className="heroActions">
+        <a className="primaryButton" href="#about">Explore portfolio</a>
+        <a className="secondaryButton" href="https://github.com/SeanSpon" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </div>
+    <aside className="heroPanel">
+      <div className="panelLabel">CURRENTLY</div>
+      <div className="stat"><span>Program</span><strong>Information Technology</strong></div>
+      <div className="stat"><span>Track</span><strong>Software Application Development</strong></div>
+      <div className="stat"><span>Community</span><strong>University Honors Program</strong></div>
+      <div className="stat"><span>Focus</span><strong>Build · Learn · Improve</strong></div>
+    </aside>
+  </section>
 
-<section id="review"><div className="sectionTag">03 / YEAR IN REVIEW</div><h2 className="sectionTitle">Growth, year by year.</h2><p className="sectionIntro darkText">Each academic year, this section will become a record of the bigger picture: what I learned, what changed, and where I want to go next.</p><div className="timeline">{years.map((item,i)=><article className={item.active?"yearCard active":"yearCard future"} key={item.year}><div><span>{item.label}</span><h3>{item.year}</h3></div><p>{item.text}</p>{item.active&&<small>Reflection to be completed by June 5, 2027.</small>}</article>)}</div></section>
+  <section id="about" className="lightSection">
+    <div className="sectionHeader"><span className="sectionNumber">01</span><div><p className="sectionEyebrow">ABOUT ME</p><h2>More than a class assignment.</h2></div></div>
+    <div className="aboutGrid">
+      <div className="aboutRail">
+        <div className="photoCard">
+          <div className="photoPlaceholder"><span>ADD PHOTO</span><small>Professional or personality photo</small></div>
+        </div>
+        <div className="miniFacts">
+          <div><span>FROM</span><strong>Louisville, Kentucky</strong></div>
+          <div><span>AT UC</span><strong>Information Technology</strong></div>
+          <div><span>INTERESTS</span><strong>Software · AI · Cybersecurity</strong></div>
+        </div>
+      </div>
+      <div className="aboutCopy">
+        <p className="introText">I’m Sean McCulloch, an Information Technology student at the University of Cincinnati studying Software Application Development and a member of the University Honors Program. I’m originally from Louisville, Kentucky, where I attended Trinity High School.</p>
+        <p>I’ve always been drawn to computers, problem solving, and figuring out how technology works. That interest grew into building websites and software projects of my own. I co-founded SeeZee Studio, where I work on real technology projects and continue learning about development, systems, business, communication, and turning ideas into useful products.</p>
+        <p>At UC, I want to keep expanding beyond what I already know. I’m interested in software development, artificial intelligence, cybersecurity, entrepreneurship, and the ways technology can solve real problems. Through the Honors Program, I hope to challenge myself outside the classroom, meet people with different interests and perspectives, and become a stronger student and leader.</p>
+        <p>Outside of technology, I enjoy lifting, hockey, spending time with friends, and setting new goals for myself. By graduation, I want strong technical experience, meaningful co-op and internship work, a network of people I’ve learned from, and a portfolio that shows how much I’ve grown.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="honors" className="alt"><div className="sectionTag">04 / HONORS EXPERIENCES</div><h2 className="sectionTitle">Experience showcases.</h2><p className="sectionIntro">I’m at the beginning of my Honors journey, so there are no completed showcases yet. As I finish Honors experiences, each one will get its own page or showcase with a concise reflection and an artifact representing what I learned.</p><div className="emptyShowcase"><div className="emptyNumber">01</div><div><span>UPCOMING</span><h3>First Honors Experience</h3><p>No completed experience yet. This space is intentionally ready for my first showcase.</p></div></div></section>
+  <section id="involvement" className="darkSection">
+    <div className="sectionHeader darkHeader"><span className="sectionNumber">02</span><div><p className="sectionEyebrow">INVOLVEMENT & INTERESTS</p><h2>What I care about now.</h2></div></div>
+    <div className="interestGrid">
+      {interests.map(item => <article className="interestCard" key={item.num}>
+        <span className="cardNum">{item.num}</span>
+        <div><h3>{item.title}</h3><p>{item.text}</p>{item.link&&<a href={item.link} target="_blank" rel="noreferrer">{item.linkText}</a>}</div>
+      </article>)}
+    </div>
+  </section>
 
-<section id="contact"><div className="sectionTag">05 / CONTACT & LINKS</div><div className="contactGrid"><div><h2>Keep<br/><em>building.</em></h2></div><div><p>This portfolio will continue to grow throughout my time at the University of Cincinnati.</p><a href="https://github.com/SeanSpon" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://seezeestudios.com" target="_blank" rel="noreferrer">SeeZee Studio ↗</a></div></div></section>
-<footer><b>Sean McCulloch</b><span>University of Cincinnati • Information Technology • University Honors Program</span><span>© 2026</span></footer></main>}
+  <section id="review" className="lightSection">
+    <div className="sectionHeader"><span className="sectionNumber">03</span><div><p className="sectionEyebrow">YEAR IN REVIEW</p><h2>A record of growth.</h2><p className="headerNote">Each academic year will get its own reflection as this portfolio grows with me.</p></div></div>
+    <div className="yearGrid">
+      {years.map(item => <article className={item.active?"yearCard active":"yearCard"} key={item.year}>
+        <div className="yearTop"><span>{item.label}</span>{item.active&&<b>UPCOMING</b>}</div>
+        <h3>{item.year}</h3>
+        <p>{item.text}</p>
+        {item.active&&<small>First reflection due after the 2026–27 academic year.</small>}
+      </article>)}
+    </div>
+  </section>
+
+  <section id="honors" className="darkSection">
+    <div className="sectionHeader darkHeader"><span className="sectionNumber">04</span><div><p className="sectionEyebrow">HONORS EXPERIENCES</p><h2>Experience showcases.</h2><p className="headerNote">As I complete Honors experiences, each will have its own reflection and artifact showing what I learned.</p></div></div>
+    <div className="honorsEmpty">
+      <div className="honorsIndex">01</div>
+      <div><span className="statusDot"><i/>READY FOR THE FIRST EXPERIENCE</span><h3>Nothing to fake here.</h3><p>I have not completed an Honors Experience yet. This space is intentionally ready for my first showcase once I have something meaningful to add.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" className="contactSection">
+    <div>
+      <p className="sectionEyebrow">CONTACT & LINKS</p>
+      <h2>This portfolio is<br/><em>just getting started.</em></h2>
+    </div>
+    <div className="linkStack">
+      <a href="https://github.com/SeanSpon" target="_blank" rel="noreferrer"><span>GitHub</span><b>↗</b></a>
+      <a href="https://seezeestudios.com" target="_blank" rel="noreferrer"><span>SeeZee Studio</span><b>↗</b></a>
+    </div>
+  </section>
+
+  <footer><div><strong>UC</strong><span>Sean McCulloch · Honors Portfolio</span></div><span>Information Technology · Software Application Development</span><span>© 2026</span></footer>
+</main>}
