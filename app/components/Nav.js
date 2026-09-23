@@ -4,9 +4,9 @@ export default function Nav() {
   return (
     <header className="siteHeader">
       <div className="navInner">
-        <Link href="/" className="siteName">
-          <strong>Sean McCulloch</strong>
-          <span>Honors Portfolio</span>
+        <Link href="/" className="siteName" aria-label="Sean McCulloch, home">
+          <span className="brandMark">SM</span>
+          <span className="brandText"><strong>Sean McCulloch</strong><small>UC Honors Portfolio</small></span>
         </Link>
         <nav className="pageNav" aria-label="Portfolio navigation">
           <Link href="/">Home</Link>
